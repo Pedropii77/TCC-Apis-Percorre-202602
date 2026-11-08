@@ -2,15 +2,17 @@
  
 Trabalho de Conclusão de Curso (TCC) do curso de Desenvolvimento Web do Instituto Percorre.
  
-Site sobre a **Lupita**, a personagem que apresenta o núcleo de empregabilidade do Instituto Percorre, que acompanha o ex-aluno por até 5 anos e o conecta com vagas e oportunidades reais no mercado.
+A **Astra** é uma consultoria online que cria sites para empresas. Este repositório reúne o nosso projeto de exemplo: o site da **Lupita**, a personagem que apresenta o núcleo de empregabilidade do Instituto Percorre, que acompanha o ex-aluno por até 5 anos e o conecta com vagas reais no mercado.
  
----Adicionar link do site aq---
+---Adicionar link do site aq ASS:Pedropii77---
  
 ---
  
 ## Sobre o projeto
  
-O objetivo do projeto é recriar e desenvolver a página da Lupita, aplicando na prática o que aprendemos no curso: estrutura com HTML, estilização responsiva com CSS e interatividade com JavaScript.
+A **Astra** é uma consultoria online criada por nós como projeto de TCC. A ideia é ajudar empresas a ganharem presença na internet, desenvolvendo sites sob medida para cada uma delas.
+ 
+Como exemplo de cliente, criamos o site da **Lupita**, do Instituto Percorre. Foi a oportunidade de colocar em prática tudo o que aprendemos no curso: HTML para estruturar as páginas, CSS para dar vida ao visual e deixar o site responsivo, e JavaScript para as interações.
  
 ## Tecnologias
  
@@ -18,18 +20,17 @@ O objetivo do projeto é recriar e desenvolver a página da Lupita, aplicando na
 - **CSS3**: layout, cores e responsividade (Flexbox e Grid)
 - **JavaScript**: interações do site
 - **Git e GitHub**: versionamento e trabalho em equipe
-- **GitHub Pages**: publicação do site
  
 ## Como rodar o projeto localmente
  
 1. Clone o repositório:
 ```bash
-   git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
+   git clone https://github.com/Pedropii77/TCC-Astra-Percorre-202602.git
 ```
  
 2. Entre na pasta do projeto:
 ```bash
-   cd NOME-DO-REPOSITORIO
+   cd TCC-Astra-Percorre
 ```
  
 3. Abra o `index.html` no navegador. Se usar o VS Code, a extensão **Live Server** atualiza a página automaticamente a cada alteração.
