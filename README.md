@@ -43,8 +43,8 @@ Não é preciso instalar nenhuma dependência.
 | Pedro Sousa | [@Pedropii77] [(https://github.com/Pedropii77)] |
 | Gustavo Medeiros | [@gustavomedeirocunha] [(https://github.com/gustavomedeirocunha)] |
 | Rafael Sousa | [@ografaex] [(https://github.com/ografaex)] |
-| Nome do integrante 4 | [@usuario3] (https://github.com/usuario3) |
-| Nome do integrante 5 | [@usuario3] (https://github.com/usuario3) |
+| Nome do integrante 4 | [@usuario4] (https://github.com/usuario4) |
+| Nome do integrante 5 | [@usuario5] (https://github.com/usuario5) |
  
 ## Agradecimentos
  
