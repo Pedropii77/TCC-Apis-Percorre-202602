@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+/* HEADER */
+
 .header {
     width: 100%;
     height: 71px;
@@ -83,4 +85,108 @@
     height: 100%;
     background-color: #FFA301;
     text-align: center;
+}
+
+/* MAIN */
+
+
+
+/* FOOTER */
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+    padding: 50px 60px 0;
+    background-color: #400363;
+    background-image: url('../img/background-footer.png');
+    background-size: cover;
+    background-position: center;
+    border-top: 4px solid #FFA301;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Lupita */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-mascote {
+    height: 90px;
+    width: auto;
+}
+
+.titulo-footer {
+    font-size: 28px;
+    color: #FFA301;
+}
+
+.subtitulo-footer {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Navegação e contatos */
+
+.footer-nav, .footer-contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.subtitulo-navegue, .subtitulo-conecte {
+    font-size: 16px;
+    color: #FFA301;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    color: #FFA301;
+}
+
+.footer-icones {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-icones a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-icones a:hover {
+    background-color: #FFA301;
+    color: #400363;
+}
+
+/* Linha de baixo */
+
+.footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 13px;
 }
