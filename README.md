@@ -4,7 +4,7 @@ Trabalho de Conclusão de Curso (TCC) do curso de Desenvolvimento Web do Institu
  
 A **Apis** é uma consultoria online que cria sites para empresas. Este repositório reúne o nosso projeto de exemplo: o site da **Lupita**, a personagem que apresenta o núcleo de empregabilidade do Instituto Percorre, que acompanha o ex-aluno por até 5 anos e o conecta com vagas reais no mercado.
  
-[(https://pedropii77.github.io/TCC-Astra-Percorre-202602/)]
+[(https://pedropii77.github.io/TCC-Apis-Percorre-202602/)]
  
 ---
  
@@ -25,7 +25,7 @@ Como exemplo de cliente, criamos o site da **Lupita**, do Instituto Percorre. Fo
  
 1. Clone o repositório:
 ```bash
-   git clone https://github.com/Pedropii77/TCC-Astra-Percorre-202602.git
+   git clone https://github.com/Pedropii77/TCC-Apis-Percorre-202602.git
 ```
  
 2. Entre na pasta do projeto:
