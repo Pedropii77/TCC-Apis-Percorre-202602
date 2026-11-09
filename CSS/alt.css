@@ -190,3 +190,25 @@
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 13px;
 }
+
+/* Botão de Acessibilidade */
+
+body .asw-menu-btn {
+    background-color: #9900bd !important;
+    border-color: #ffffff !important;
+    outline-color: #400363 !important;
+    color: white !important;
+
+    /* move para a direita */
+    left: auto !important;
+    right: 20px !important;
+}
+
+body .asw-menu-header {
+    background-color: #400363 !important;
+    color: white !important;
+}
+
+body .asw-menu-btn, body .asw-menu-header, body .asw-menu-content {
+    font-family: "Montserrat", sans-serif !important;
+}
