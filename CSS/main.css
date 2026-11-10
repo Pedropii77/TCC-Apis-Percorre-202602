@@ -153,28 +153,42 @@
 .logo-percorre {
     align-self: center;
     filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4));
-    width: 100vh;
+    width: 1000px;
+    
 }
  
-.navbar-onda1 {
+/* ONDA (divisão entre a seção roxa e a seção de vagas) */
+ 
+.divisor-onda {
     width: 100%;
     height: 100px;
-    background-image: url('../img/onda.png');
-    background-repeat: no-repeat;
-    margin-top: -100px;
+    margin-top: -100px;      /* sobe a onda para cima da seção roxa */
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    line-height: 0;
+}
+ 
+.divisor-onda svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+ 
+.divisor-onda path {
+    fill: #ebe3f5;           /* mesma cor do início do degradê do .main-vagas */
 }
  
 /* MAIN VAGAS */
  
 .main-vagas {
+    position: relative;
+    z-index: 2;
     width: 100%;
-    background-color: white;
+    min-height: 20vh;
+    background: linear-gradient(180deg, #ebe3f5 0%, #f5f0fa 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0 10px;
 }
  
 .main-vagas-left {
@@ -201,9 +215,9 @@
  
 .main-vagas-right {
     width: 50%;
-    padding-left: 100px;
+    padding-right: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     text-align: center;
 }
@@ -231,9 +245,8 @@
 /* ========== CARROSSEL ========== */
  
 .vagas-carrossel {
-    max-width: 1240px;
     margin: 0 auto;
-    padding: 0 100px 40px;
+    padding: 30px 40px 40px;
 }
  
 .vagas-track {
@@ -258,6 +271,7 @@
 }
  
 .vaga-card {
+    height: 550px;
     flex: 0 0 calc((100% - 48px) / 3);
     scroll-snap-align: start;
     display: flex;
@@ -278,10 +292,10 @@
  
 .vaga-foto {
     position: relative;
-    height: 150px;
+    height: 180px;
     border-radius: 14px;
     background-color: #9000b5;
-    background-image: var(--foto), linear-gradient(135deg, #9000b5 0%, #400363 100%);
+    background-image: url(https://imgs.search.brave.com/hIg7-u4afNpvLVRA9xsojAwBZH01FSGzo4GsyyEo2ew/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91bml2/ZXJzb2x1ZGljby5j/b20uYnIvd3AtY29u/dGVudC91cGxvYWRz/LzIwMjAvMDcvQ0VO/VFJPLUhJU1RPUklD/Ty1ERS1TQU8tUEFV/TE8uanBn), linear-gradient(135deg, #9000b5 0%, #400363 100%);
     background-size: cover;
     background-position: center;
 }
@@ -558,4 +572,4 @@ body .asw-menu-header {
 body .asw-menu-btn, body .asw-menu-header, body .asw-menu-content {
     font-family: "Montserrat", sans-serif !important;
 }
- 
+    
