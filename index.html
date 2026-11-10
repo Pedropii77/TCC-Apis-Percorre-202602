@@ -69,18 +69,21 @@
             </div>
         </section>
 
-        <section class="cards-vagas">
-            <article>
-                Vaga 1
-            </article>
+ <!-- Cards de vagas -->
+         
+        <section class="cards-vagas" aria-label="Vagas em destaque">
+            <div class="vagas-carrossel">
+                <!-- Os cards são gerados pelo JS (array "vagas" em js/main.js) -->
+                <div class="vagas-track" id="vagasTrack" tabindex="0"></div>
 
-            <article>
-                Vaga 2
-            </article>
-
-            <article>
-                Vaga 3
-            </article>
+                <div class="vagas-controles">
+                    <div class="vagas-dots" id="vagasDots" aria-label="Páginas do carrossel"></div>
+                    <div class="vagas-setas">
+                        <button type="button" class="vagas-seta" id="vagasPrev" aria-label="Vagas anteriores"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button type="button" class="vagas-seta" id="vagasNext" aria-label="Próximas vagas"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -124,7 +127,7 @@
     <!-- Botão de Acessibilidade -->
     <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility/dist/sienna-accessibility.umd.js" defer></script>
 
-    <script src="./js/main.js"></script>
+    <script src="./JS/main.js"></script>
 
 </body>
 
