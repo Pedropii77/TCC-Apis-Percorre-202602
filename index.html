@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +10,14 @@
     <!-- Linkagem com o site para os icons do footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
+ 
 <body>
     <header class="header">
-
+ 
         <div class="logo">
             <a href="index.html"><img src="./img/logo-lupita.png" alt="Instituto Percorre Lupita"></a>
         </div>
-
+ 
         <nav class="nav">
             <div class="navbar-menu">
                 <a href="./html/quem_somos.html">Quem somos</a>
@@ -29,12 +29,12 @@
             </div>
         </nav>
     </header>
-
+ 
     <div class="navbar-noticia">
         <img src="./img/noticia-ios-e-percorre.png"
             alt="Faixa de notícia confirmando que agora o antigo IOS se tornou Instituto Percorre">
     </div>
-
+ 
     <main class="main">
         <section class="inicio">
             <div class="inicio-left">
@@ -42,51 +42,51 @@
                 <h2 class="subtitulo">Seu futuro profissional começa aqui!</h2>
                 <a href="./html/vagas.html" class="btn-vagas"><b>CONFIRA AS VAGAS</b></a>
             </div>
-
+ 
             <div class="inicio-right">
                 <img class="logo-percorre"
                     src="https://cdn.discordapp.com/attachments/1344648005655203870/1568828813788323940/Design_sem_nome.png?ex=6af33770&is=6af1e5f0&hm=db1bc482b307b95e34c7d0fbb58a5a1dde136632bac1d1fc995c5f2fdd4d48d9&"
                     alt="Logo do Instituto Percorre">
-
+ 
             </div>
         </section>
-
+ 
         <div class="navbar-onda1"></div>
-
-       
+ 
         <section class="main-vagas">
-
+ 
             <!-- Adicionar aquei aql onda para fazer a transição de section do canva, nome dela ta divisao-main.png, porem nn to conseguindo -->
-
+ 
             <div class="main-vagas-left">
                 <h2 class="titulo-vagas-main">Seu futuro profissional começa aqui!</h2>
                 <h3 class="subtitulo-vagas-main">Temos um núcleo de empregabilidade que acompanha o ex-aluno até 5 anos
                     com conexões reais com o mercado</h3>
             </div>
-
+ 
             <div class="main-vagas-right">
                 <b><a href="./html/vagas.html">Ver todas as vagas</a></b>
             </div>
         </section>
-
- <!-- Cards de vagas -->
-         
-        <section class="cards-vagas" aria-label="Vagas em destaque">
-            <div class="vagas-carrossel">
-                <!-- Os cards são gerados pelo JS (array "vagas" em js/main.js) -->
-                <div class="vagas-track" id="vagasTrack" tabindex="0"></div>
-
-                <div class="vagas-controles">
-                    <div class="vagas-dots" id="vagasDots" aria-label="Páginas do carrossel"></div>
-                    <div class="vagas-setas">
-                        <button type="button" class="vagas-seta" id="vagasPrev" aria-label="Vagas anteriores"><i class="fa-solid fa-arrow-left"></i></button>
-                        <button type="button" class="vagas-seta" id="vagasNext" aria-label="Próximas vagas"><i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
+ 
+        <!-- Cards de vagas -->
+        <div class="vagas-carrossel">
+            <!-- Os cards são gerados pelo JS (array "vagas" em js/main.js) -->
+            <div class="vagas-track" id="vagasTrack" tabindex="0" aria-label="Lista de vagas"></div>
+ 
+            <div class="vagas-controles">
+                <div class="vagas-dots" id="vagasDots" aria-label="Páginas do carrossel"></div>
+                <div class="vagas-setas">
+                    <button type="button" class="vagas-seta" id="vagasPrev" aria-label="Vagas anteriores">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="vagas-seta" id="vagasNext" aria-label="Próximas vagas">
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
-
+ 
     <footer class="footer">
         <div class="footer-logo">
             <img src="./img/lupita-rosto.png" alt="Rosto da Lupita" class="footer-mascote">
@@ -95,7 +95,7 @@
                 <h3 class="subtitulo-footer">Iniciativa do Instituto Percorre</h3>
             </div>
         </div>
-
+ 
         <div class="footer-contatos">
             <h3 class="subtitulo-conecte">Conecte-se</h3>
             <div class="footer-icones">
@@ -109,26 +109,27 @@
                     aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
-
+ 
         <nav class="footer-nav" aria-label="Navegação do rodapé">
             <h3 class="subtitulo-navegue">Navegue</h3>
             <a href="./index.html">Início</a>
             <a href="./html/quem_somos.html">Quem somos</a>
             <a href="./html/vagas.html">Vagas</a>
         </nav>
-
+ 
         <div class="footer-bottom">
             <p class="texto-direitos-reservados">© 2026 Lupita · Instituto Percorre. Vagas exibidas são ilustrativas.
             </p>
             <p class="site-desenvolvedor">Site desenvolvido pela empresa Apis</p>
         </div>
     </footer>
-
+ 
     <!-- Botão de Acessibilidade -->
     <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility/dist/sienna-accessibility.umd.js" defer></script>
-
+ 
     <script src="./JS/main.js"></script>
-
+ 
 </body>
-
+ 
 </html>
+ 

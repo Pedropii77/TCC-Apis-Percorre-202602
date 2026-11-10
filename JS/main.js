@@ -4,7 +4,7 @@ const numero = "5511996759295"; // troque pelo número real
 const msg = "Oi, Lupita! Quero começar meu futuro profissional. Pode me ajudar?";
 document.querySelector(".whatsapp").href = "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
 
-// Carrossel de vagas
+// ===== Carrossel de vagas =====
 
 // Para adicionar/editar uma vaga, basta mexer neste array.
 // Fotos: coloque em img/vagas/ (se a foto não existir, aparece um degradê roxo).
@@ -88,11 +88,12 @@ const vagasDots = document.getElementById("vagasDots");
 const vagasPrev = document.getElementById("vagasPrev");
 const vagasNext = document.getElementById("vagasNext");
 
-if (vagasTrack) {
+if (vagasTrack && vagasDots && vagasPrev && vagasNext && vagas.length) {
     // Evita injetar HTML vindo de texto
-    const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+    const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ESCAPES[c]);
 
-    vagasTrack.innerHTML = vagas.map((v) => `
+    const cardVaga = (v) => `
         <article class="vaga-card">
             <h3 class="vaga-titulo">${esc(v.titulo)}</h3>
             <div class="vaga-foto" role="img" aria-label="Foto de ${esc(v.local)}" style="--foto: url('${esc(v.foto)}')">
@@ -103,18 +104,20 @@ if (vagasTrack) {
                 </div>
             </div>
             <ul class="vaga-info">
-                <li><i class="fa-solid fa-location-dot"></i><span>${esc(v.local)}</span></li>
-                <li class="destaque"><i class="fa-regular fa-circle-check"></i><span>${esc(v.requisito)}</span></li>
-                <li><i class="fa-regular fa-clock"></i><span>${esc(v.idade)}</span></li>
-                <li><i class="fa-regular fa-calendar-check"></i><span>${esc(v.horario)}</span></li>
-                <li class="salario"><i class="fa-solid fa-sack-dollar"></i><span>${esc(v.salario)}</span></li>
+                <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>${esc(v.local)}</span></li>
+                <li class="destaque"><i class="fa-regular fa-circle-check" aria-hidden="true"></i><span>${esc(v.requisito)}</span></li>
+                <li><i class="fa-regular fa-clock" aria-hidden="true"></i><span>${esc(v.idade)}</span></li>
+                <li><i class="fa-regular fa-calendar-check" aria-hidden="true"></i><span>${esc(v.horario)}</span></li>
+                <li class="salario"><i class="fa-solid fa-sack-dollar" aria-hidden="true"></i><span>${esc(v.salario)}</span></li>
             </ul>
             <a href="./html/vagas.html" class="vaga-botao">Saiba Mais</a>
-        </article>
-    `).join("");
+        </article>`;
+
+    vagasTrack.innerHTML = vagas.map(cardVaga).join("");
 
     const cards = vagasTrack.querySelectorAll(".vaga-card");
 
+    // Largura de um card + espaço entre eles
     const passo = () => {
         const gap = parseFloat(getComputedStyle(vagasTrack).columnGap) || 0;
         return cards[0].offsetWidth + gap;
@@ -127,30 +130,42 @@ if (vagasTrack) {
 
     const indiceAtual = () => Math.round(vagasTrack.scrollLeft / passo());
 
+    function atualizar() {
+        const atual = Math.min(indiceAtual(), totalPosicoes() - 1);
+        vagasDots.querySelectorAll(".vagas-dot").forEach((dot, i) => {
+            const ativo = i === atual;
+            dot.classList.toggle("ativo", ativo);
+            if (ativo) dot.setAttribute("aria-current", "true");
+            else dot.removeAttribute("aria-current");
+        });
+        vagasPrev.disabled = vagasTrack.scrollLeft <= 2;
+        vagasNext.disabled = vagasTrack.scrollLeft >= vagasTrack.scrollWidth - vagasTrack.clientWidth - 2;
+    }
+
     function montarDots() {
         vagasDots.innerHTML = "";
         for (let i = 0; i < totalPosicoes(); i++) {
             const dot = document.createElement("button");
             dot.type = "button";
             dot.className = "vagas-dot";
-            dot.setAttribute("aria-label", "Ir para a vaga " + (i + 1));
-            dot.addEventListener("click", () => vagasTrack.scrollTo({ left: i * passo() }));
+            dot.setAttribute("aria-label", `Ir para a vaga ${i + 1}`);
+            dot.addEventListener("click", () => vagasTrack.scrollTo({ left: i * passo(), behavior: "smooth" }));
             vagasDots.appendChild(dot);
         }
         atualizar();
     }
 
-    function atualizar() {
-        const atual = Math.min(indiceAtual(), totalPosicoes() - 1);
-        vagasDots.querySelectorAll(".vagas-dot").forEach((d, i) => d.classList.toggle("ativo", i === atual));
-        vagasPrev.disabled = vagasTrack.scrollLeft <= 2;
-        vagasNext.disabled = vagasTrack.scrollLeft >= vagasTrack.scrollWidth - vagasTrack.clientWidth - 2;
-    }
+    // Recalcula os dots só quando o usuário para de redimensionar a janela
+    let timerResize;
+    const aoRedimensionar = () => {
+        clearTimeout(timerResize);
+        timerResize = setTimeout(montarDots, 150);
+    };
 
-    vagasPrev.addEventListener("click", () => vagasTrack.scrollBy({ left: -passo() }));
-    vagasNext.addEventListener("click", () => vagasTrack.scrollBy({ left: passo() }));
+    vagasPrev.addEventListener("click", () => vagasTrack.scrollBy({ left: -passo(), behavior: "smooth" }));
+    vagasNext.addEventListener("click", () => vagasTrack.scrollBy({ left: passo(), behavior: "smooth" }));
     vagasTrack.addEventListener("scroll", atualizar, { passive: true });
-    window.addEventListener("resize", montarDots);
+    window.addEventListener("resize", aoRedimensionar);
+
     montarDots();
 }
-
