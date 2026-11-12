@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
- 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
- 
+
 /* HEADER */
- 
+
 .header {
     width: 100%;
     height: 71px;
@@ -18,72 +18,72 @@
     justify-content: space-between;
     padding: 0 20px;
 }
- 
+
 .logo {
     display: flex;
     align-items: center;
 }
- 
+
 .logo img {
     height: 81px;
     width: auto;
     margin-top: -10px;
     margin-left: 30px;
 }
- 
+
 .nav {
     display: flex;
     align-items: center;
     margin-left: auto;
     margin-right: 30px;
 }
- 
+
 .navbar-menu {
     font-family: "Montserrat", sans-serif;
     display: flex;
     align-items: center;
     gap: 18px;
 }
- 
+
 .navbar-menu a {
     color: white;
     text-decoration: none;
     font-size: 14px;
 }
- 
+
 .navbar-menu a:hover {
     color: white;
     opacity: 0.7;
 }
- 
+
 .navbar-menu .login {
     background-color: #9900bd;
     padding: 8px 20px;
     border-radius: 20px;
 }
- 
+
 .navbar-noticia {
     width: 100%;
     height: 32px;
     background-color: #FFA301;
     text-align: center;
 }
- 
+
 .navbar-noticia img {
     height: 100%;
     background-color: #FFA301;
     text-align: center;
 }
- 
+
 /* MAIN */
- 
+
 .main {
     font-family: "Montserrat", sans-serif;
     background-color: white;
 }
- 
+
 /* INICIO MAIN (OLÁ, EU SOU LUPITA) */
- 
+
 .inicio {
     display: flex;
     align-items: center;
@@ -92,15 +92,16 @@
     background-image: url('../img/background-main1.png');
     background-size: cover;
 }
- 
-.inicio-left, .inicio-right {
+
+.inicio-left,
+.inicio-right {
     width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
- 
+
 .inicio-left {
     width: 50%;
     display: flex;
@@ -108,7 +109,7 @@
     align-items: center;
     padding-bottom: 50px;
 }
- 
+
 .btn-vagas {
     width: 400px;
     height: 40px;
@@ -121,66 +122,68 @@
     border-radius: 20px;
     font-size: 20px;
 }
- 
+
 .btn-vagas:hover {
     background-color: #e69500;
     color: #400363;
     opacity: 0.95;
 }
- 
+
 .titulo {
     font-size: 60px;
     color: #FFA301;
     margin-bottom: 5px;
 }
- 
+
 .subtitulo {
     font-size: 30px;
     color: white;
     margin-bottom: 20px;
 }
- 
+
 .inicio-right {
     width: 50%;
     align-self: stretch;
     display: grid;
     place-items: end center;
 }
- 
+
 .inicio-right img {
     grid-area: 1 / 1;
 }
- 
+
 .logo-percorre {
     align-self: center;
     filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4));
     width: 1000px;
-    
+
 }
- 
+
 /* ONDA (divisão entre a seção roxa e a seção de vagas) */
- 
+
 .divisor-onda {
     width: 100%;
     height: 100px;
-    margin-top: -100px;      /* sobe a onda para cima da seção roxa */
+    margin-top: -100px;
+    /* sobe a onda para cima da seção roxa */
     position: relative;
     z-index: 2;
     line-height: 0;
 }
- 
+
 .divisor-onda svg {
     width: 100%;
     height: 100%;
     display: block;
 }
- 
+
 .divisor-onda path {
-    fill: #ebe3f5;           /* mesma cor do início do degradê do .main-vagas */
+    fill: #ebe3f5;
+    /* mesma cor do início do degradê do .main-vagas */
 }
- 
+
 /* MAIN VAGAS */
- 
+
 .main-vagas {
     position: relative;
     z-index: 2;
@@ -191,7 +194,7 @@
     justify-content: space-between;
     align-items: center;
 }
- 
+
 .main-vagas-left {
     width: 50%;
     height: auto;
@@ -201,19 +204,19 @@
     flex-direction: column;
     padding-left: 50px;
 }
- 
+
 .titulo-vagas-main {
     color: #9000b5;
     font-size: 38px;
     margin-bottom: 4px;
 }
- 
+
 .subtitulo-vagas-main {
     color: #9000b5;
     font-size: 22px;
     font-weight: 400;
 }
- 
+
 .main-vagas-right {
     width: 50%;
     padding-right: 50px;
@@ -222,7 +225,7 @@
     align-items: center;
     text-align: center;
 }
- 
+
 .main-vagas-right a {
     width: 350px;
     height: 50px;
@@ -235,22 +238,22 @@
     color: white;
     text-decoration: none;
 }
- 
+
 .main-vagas-right a:hover {
     background-color: #760096;
     opacity: 0.9;
 }
- 
+
 /* MAIN CARDS VAGAS */
- 
+
 /* ========== CARROSSEL ========== */
- 
+
 .vagas-carrossel {
     margin: 0 auto;
     padding: 30px 40px 40px;
     background-color: #f5f0fa;
 }
- 
+
 .vagas-track {
     display: flex;
     gap: 24px;
@@ -261,17 +264,17 @@
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
 }
- 
+
 .vagas-track::-webkit-scrollbar {
     display: none;
 }
- 
+
 .vagas-track:focus-visible {
     outline: 3px solid #FFA301;
     outline-offset: 4px;
     border-radius: 20px;
 }
- 
+
 .vaga-card {
     height: 550px;
     flex: 0 0 calc((100% - 48px) / 3);
@@ -285,13 +288,13 @@
     box-shadow: 0 6px 18px rgba(64, 3, 99, 0.18);
     color: #400363;
 }
- 
+
 .vaga-titulo {
     text-align: center;
     font-size: 16px;
     font-weight: 700;
 }
- 
+
 .vaga-foto {
     position: relative;
     height: 180px;
@@ -301,7 +304,7 @@
     background-size: cover;
     background-position: center;
 }
- 
+
 .vaga-estado {
     position: absolute;
     top: 8px;
@@ -313,7 +316,7 @@
     font-size: 11px;
     font-weight: 700;
 }
- 
+
 .vaga-tags {
     position: absolute;
     left: 8px;
@@ -321,7 +324,7 @@
     display: flex;
     gap: 6px;
 }
- 
+
 .vaga-tag {
     padding: 2px 9px;
     border-radius: 6px;
@@ -330,11 +333,11 @@
     font-size: 10px;
     font-weight: 600;
 }
- 
+
 .vaga-tag.area {
     background-color: #FFA301;
 }
- 
+
 .vaga-info {
     list-style: none;
     display: flex;
@@ -343,13 +346,13 @@
     font-size: 13px;
     color: #7a0a9c;
 }
- 
+
 .vaga-info li {
     display: flex;
     align-items: flex-start;
     gap: 10px;
 }
- 
+
 .vaga-info i {
     flex: 0 0 18px;
     margin-top: 2px;
@@ -357,16 +360,16 @@
     font-size: 16px;
     color: #9000b5;
 }
- 
+
 .vaga-info .destaque {
     font-weight: 700;
 }
- 
+
 .vaga-info .salario {
     font-weight: 700;
     color: #400363;
 }
- 
+
 .vaga-botao {
     margin-top: auto;
     height: 38px;
@@ -380,26 +383,26 @@
     font-weight: 700;
     text-decoration: none;
 }
- 
+
 .vaga-botao:hover {
     background-color: #6b0085;
 }
- 
+
 /* Controles (dots + setas) */
- 
+
 .vagas-controles {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     margin-top: 8px;
 }
- 
+
 .vagas-dots {
     grid-column: 2;
     display: flex;
     gap: 8px;
 }
- 
+
 .vagas-dot {
     width: 7px;
     height: 7px;
@@ -410,20 +413,20 @@
     cursor: pointer;
     transition: width 0.25s, background-color 0.25s;
 }
- 
+
 .vagas-dot.ativo {
     width: 24px;
     border-radius: 6px;
     background-color: #8a00a8;
 }
- 
+
 .vagas-setas {
     grid-column: 3;
     justify-self: end;
     display: flex;
     gap: 8px;
 }
- 
+
 .vagas-seta {
     width: 32px;
     height: 32px;
@@ -437,26 +440,110 @@
     font-size: 14px;
     cursor: pointer;
 }
- 
+
 .vagas-seta:hover:not(:disabled) {
     background-color: #6b0085;
 }
- 
+
 .vagas-seta:disabled {
     background-color: #c46ad9;
     opacity: 0.7;
     cursor: default;
 }
- 
+
 .vagas-seta:focus-visible,
 .vagas-dot:focus-visible {
     outline: 3px solid #FFA301;
     outline-offset: 2px;
 }
- 
- 
+
+/*  MAIN JORNADA */
+.main-jornada {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 50vh;
+    background-color: #f5f0fa;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 50px;
+}
+
+.center-jornada-main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.titulo-jornada {
+    color: #9000b5;
+    font-size: 38px;
+    margin-bottom: 4px;
+}
+
+.subtitulo-jornada {
+    color: #9000b5;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.etapas {
+    padding-top: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.etapa {
+    width: 190px;
+    text-align: center;
+}
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: #f0d9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+
+.circulo img {
+    width: 80px;
+    height: 80px;
+}
+
+.etapa h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #6a0f8e;
+}
+
+.etapa p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #8a1fb0;
+}
+
+.linha {
+    width: 75px;
+    height: 1px;
+    margin-top: 50px;
+    /* alinha com o meio do círculo */
+    background: #f0b92b;
+}
+
 /* FOOTER */
- 
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -471,57 +558,59 @@
     color: white;
     font-family: "Montserrat", sans-serif;
 }
- 
+
 /* Lupita */
- 
+
 .footer-logo {
     display: flex;
     align-items: center;
     gap: 16px;
 }
- 
+
 .footer-mascote {
     height: 90px;
     width: auto;
 }
- 
+
 .titulo-footer {
     font-size: 28px;
     color: #FFA301;
 }
- 
+
 .subtitulo-footer {
     font-size: 14px;
     font-weight: 400;
 }
- 
+
 /* Navegação e contatos */
- 
-.footer-nav, .footer-contatos {
+
+.footer-nav,
+.footer-contatos {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
- 
-.subtitulo-navegue, .subtitulo-conecte {
+
+.subtitulo-navegue,
+.subtitulo-conecte {
     font-size: 16px;
     color: #FFA301;
 }
- 
+
 .footer-nav a {
     color: white;
     text-decoration: none;
 }
- 
+
 .footer-nav a:hover {
     color: #FFA301;
 }
- 
+
 .footer-icones {
     display: flex;
     gap: 12px;
 }
- 
+
 .footer-icones a {
     width: 42px;
     height: 42px;
@@ -534,14 +623,14 @@
     font-size: 20px;
     text-decoration: none;
 }
- 
+
 .footer-icones a:hover {
     background-color: #FFA301;
     color: #400363;
 }
- 
+
 /* Linha de baixo */
- 
+
 .footer-bottom {
     width: 100%;
     display: flex;
@@ -552,26 +641,34 @@
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 13px;
 }
- 
+
 /* Botão de Acessibilidade */
- 
+
 body .asw-menu-btn {
     background-color: #9900bd !important;
     border-color: #ffffff !important;
     outline-color: #400363 !important;
     color: white !important;
- 
+
     /* move para a direita */
     left: auto !important;
     right: 20px !important;
 }
- 
+
 body .asw-menu-header {
     background-color: #400363 !important;
     color: white !important;
 }
- 
-body .asw-menu-btn, body .asw-menu-header, body .asw-menu-content {
+
+body .asw-menu-btn,
+body .asw-menu-header,
+body .asw-menu-content {
     font-family: "Montserrat", sans-serif !important;
 }
-    
+
+@media screen and (max-width: 600px) {
+    .vitrini {
+        flex-direction: column;
+        align-items: center;
+    }
+}

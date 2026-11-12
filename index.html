@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +10,14 @@
     <!-- Linkagem com o site para os icons do footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
- 
+
 <body>
     <header class="header">
- 
+
         <div class="logo">
             <a href="index.html"><img src="./img/logo-lupita.png" alt="Instituto Percorre Lupita"></a>
         </div>
- 
+
         <nav class="nav">
             <div class="navbar-menu">
                 <a href="./html/quem_somos.html">Quem somos</a>
@@ -29,12 +29,12 @@
             </div>
         </nav>
     </header>
- 
+
     <div class="navbar-noticia">
         <img src="./img/noticia-ios-e-percorre.png"
             alt="Faixa de notícia confirmando que agora o antigo IOS se tornou Instituto Percorre">
     </div>
- 
+
     <main class="main">
         <section class="inicio">
             <div class="inicio-left">
@@ -42,36 +42,36 @@
                 <h2 class="subtitulo">Seu futuro profissional começa aqui!</h2>
                 <a href="./html/vagas.html" class="btn-vagas"><b>CONFIRA AS VAGAS</b></a>
             </div>
- 
+
             <div class="inicio-right">
                 <img class="logo-percorre" src="./img/lupita.png" alt="Lupita, mascote do Instituto Percorre">
             </div>
         </section>
- 
+
         <!-- Onda de transição entre a seção roxa e a seção de vagas -->
         <div class="divisor-onda">
             <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
                 <path d="M0,60 C240,110 480,10 760,40 C1040,70 1240,110 1440,50 L1440,120 L0,120 Z"></path>
             </svg>
         </div>
- 
+
         <section class="main-vagas">
             <div class="main-vagas-left">
                 <h2 class="titulo-vagas-main">Seu futuro profissional começa aqui!</h2>
                 <h3 class="subtitulo-vagas-main">Temos um núcleo de empregabilidade que acompanha o ex-aluno até 5 anos
                     com conexões reais com o mercado</h3>
             </div>
- 
+
             <div class="main-vagas-right">
                 <a href="./html/vagas.html"><b>Ver todas as vagas</b></a>
             </div>
         </section>
- 
+
         <!-- Cards de vagas -->
         <div class="vagas-carrossel">
             <!-- Os cards são gerados pelo JS (array "vagas" em js/main.js) -->
             <div class="vagas-track" id="vagasTrack" tabindex="0" aria-label="Lista de vagas"></div>
- 
+
             <div class="vagas-controles">
                 <div class="vagas-dots" id="vagasDots" aria-label="Páginas do carrossel"></div>
                 <div class="vagas-setas">
@@ -84,8 +84,50 @@
                 </div>
             </div>
         </div>
+        <hr>
+        <section class="main-jornada">
+            <div class="center-jornada-main">
+                <h2 class="titulo-jornada">
+                    <p>Sua jornada profissional começa com um primeiro passo </p>
+                </h2>
+                <h3 class="subtitulo-jornada">
+                    <p>A Lupita acompanha você em cada etapa da sua trajetória. <br>
+                        Desde a formação até a conquista de novas oportunidades! </p>
+                    </h2>
+            </div>
+
+            <div class="etapas">
+            <div class="etapa">
+                <div class="circulo"><img src="../img/formacao.png" alt=""></div>
+                <h3>Formação</h3>
+                <p>Cursos profissionalizantes gratuitos na área de tecnologia</p>
+            </div>
+            <div class="linha"></div>
+
+            <div class="etapa">
+                <div class="circulo"><img src="../img/orientacao.png" alt=""></div>
+                <h3>Orientação</h3>
+                <p>Desenvolvimento de habilidades profissionais.</p>
+            </div>
+            <div class="linha"></div>
+
+            <div class="etapa">
+                <div class="circulo"><img src="../img/oportunidades.png" alt=""></div>
+                <h3>Oportunidades</h3>
+                <p>Cursos profissionalizantes gratuitos na área de tecnologia</p>
+            </div>
+            <div class="linha"></div>
+
+            <div class="etapa">
+                <div class="circulo"><img src="../img/acompanhamento.png" alt=""></div>
+                <h3>Acompanhamento</h3>
+                <p>5 anos de acompanhamento pós-formação</p>
+            </div>
+            </div>
+        </section>
+        
     </main>
- 
+
     <footer class="footer">
         <div class="footer-logo">
             <img src="./img/lupita-rosto.png" alt="Rosto da Lupita" class="footer-mascote">
@@ -94,7 +136,7 @@
                 <h3 class="subtitulo-footer">Iniciativa do Instituto Percorre</h3>
             </div>
         </div>
- 
+
         <div class="footer-contatos">
             <h3 class="subtitulo-conecte">Conecte-se</h3>
             <div class="footer-icones">
@@ -108,27 +150,26 @@
                     aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
- 
+
         <nav class="footer-nav" aria-label="Navegação do rodapé">
             <h3 class="subtitulo-navegue">Navegue</h3>
             <a href="./index.html">Início</a>
             <a href="./html/quem_somos.html">Quem somos</a>
             <a href="./html/vagas.html">Vagas</a>
         </nav>
- 
+
         <div class="footer-bottom">
             <p class="texto-direitos-reservados">© 2026 Lupita · Instituto Percorre. Vagas exibidas são ilustrativas.
             </p>
             <p class="site-desenvolvedor">Site desenvolvido pela empresa Apis</p>
         </div>
     </footer>
- 
+
     <!-- Botão de Acessibilidade -->
     <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility/dist/sienna-accessibility.umd.js" defer></script>
- 
+
     <script src="./JS/main.js"></script>
- 
+
 </body>
- 
+
 </html>
- 
