@@ -6,159 +6,105 @@
     box-sizing: border-box;
 }
 
-/* QUEM SOMOS */
-
 .main-quemsomos {
     display: flex;
     align-items: center;
     min-height: 560px;
     overflow: hidden;
-    background-size: cover;
     font-family: "Montserrat", sans-serif;
-    background-color: #fff6e5;              /* Cor estranha, se pá mudar ASS: 77 */
+    background-color: #fff6e5;
+    background-image: url('../img/backgorund-quem-somos1.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .main-inicio-quem {
     width: 100%;
-    min-height: 500px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .main-inicio-quem-left {
-    width: 42%;
-    height: 100%;
+    position: relative;
+    left: -40px;
+    flex: 1 1 480px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    padding-left: 50px;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .titulo-inicio-quem {
     font-size: 55px;
+    line-height: 1.1;
     color: #FFA301;
-    padding-left: 15px;
 }
 
 .texto-inicio-quem {
+    max-width: 640px;
     font-size: 30px;
-    color: #9000b5;
-    padding-top: 25px;
-    padding-left: 15px;
-    padding-bottom: 20px;
+    line-height: 1.4;
+    color: white;
 }
 
 .btn-inicio-quem {
     width: 250px;
     min-height: 50px;
-    background-color: #9000b5;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 35px;
-    text-decoration: none;
+    background-color: #9000b5;
     color: white;
     font-size: 23px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 .btn-inicio-quem:hover {
     background-color: #760096;
-    opacity: 0.7;
-    transition: 1s;
 }
 
 .main-inicio-quem-right {
-    width: 50%;
-    max-width: 700px;
-    min-height: 500px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(2, 190px);
-    column-gap: 12px;
-    row-gap: 13px;
-    align-content: center;
+    position: relative;
+    left: 80px;
+    flex: 1 1 420px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 0 40px 34px 0;
-    transform: scale(0.95);
 }
 
-.main-inicio-quem-right > div {
+.img-predio {
     width: 100%;
-    height: 190px;
+    max-width: 520px;
+    height: auto;
+    filter: drop-shadow(0 12px 20px rgba(64, 3, 99, 0.25));
 }
 
-#quadrado1 {
-    width: 100%;
-    height: 100%;
-    border-radius: 28px;
-    background-color: #8901a9;
-}
-
-#quadrado2 {
-    width: 100%;
-    height: 100%;
-    border-radius: 28px;
-    background-color: #5b0282;
-}
-
-#quadrado3 {
-    width: 100%;
-    height: 100%;
-    border-radius: 28px;
-    background-color: #5b0282;
-}
-
-#quadrado4 {
-    width: 100%;
-    height: 82px;
-    border-radius: 14px;
-    background-color: #8b05bf;
-}
-
-#quadrado5 {
-    width: 100%;
-    height: 100%;
-    border-radius: 28px;
-    background-color: #8901a9;
-}
-
-#quadrado6 {
-    width: 100%;
-    height: 100%;
-    border-radius: 28px;
-    background-color: #ffa900;
-}
-
-.main-inicio-quem-right > div:nth-child(1),
-.main-inicio-quem-right > div:nth-child(4) {
-    transform: translateY(52px);
-}
-
-.main-inicio-quem-right > div:nth-child(3) {
-    transform: translateY(43px);
-}
-
-.main-inicio-quem-right > div:nth-child(6) {
-    transform: translateY(49px);
-}
-
-@media (max-width: 760px) {
-    .main-inicio-quem {
-        flex-direction: column;
-    }
-
+@media (max-width: 1100px) {
     .main-inicio-quem-left,
     .main-inicio-quem-right {
-        width: 100%;
+        left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-inicio-quem {
+        padding: 40px 24px;
     }
 
-    .main-inicio-quem-right {
-        align-self: center;
-        width: min(100%, 560px);
-        padding: 0 16px 34px;
+    .titulo-inicio-quem {
+        font-size: 36px;
+    }
+
+    .texto-inicio-quem {
+        font-size: 20px;
     }
 }
