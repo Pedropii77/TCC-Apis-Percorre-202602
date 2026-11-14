@@ -6,4 +6,334 @@
     box-sizing: border-box;
 }
 
+.main {
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+}
+
+.inicio {
+    display: flex;
+    align-items: center;
+    min-height: 560px;
+    overflow: hidden;
+    background-color: white;
+    background-size: cover;
+}
+
+.inicio-left,
+.inicio-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio-left {
+    padding: 0 40px 50px 60px;
+}
+
+.inicio-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 640px;
+}
+
+.titulo-box {
+    position: relative;
+}
+
+.titulo {
+    font-size: 60px;
+    color: #8b05bf;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    font-size: 25px;
+    font-weight: 400;
+    color: #8b05bf;
+    margin-bottom: 20px;
+}
+
+.destaque {
+    color: #FFA301;
+}
+
+.inicio-right {
+    width: 50%;
+    align-self: stretch;
+    display: grid;
+    place-items: end center;
+}
+
+.inicio-right img {
+    grid-area: 1 / 1;
+}
+
+.logo-percorre {
+    align-self: center;
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4));
+    width: 1000px;
+}
+
+.divisor-onda {
+    width: 100%;
+    height: 100px;
+    margin-top: -100px;
+    position: relative;
+    z-index: 2;
+    line-height: 0;
+}
+
+.divisor-onda svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.divisor-onda path {
+    fill: #4c0271;
+}
 /* VAGAS */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.vagas-lista {
+    position: relative;
+    z-index: 2;
+    margin-top: -1px;
+    padding: 10px 40px 70px;
+    background: linear-gradient(180deg, #4c0271 0%, #400363 100%);
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Barra de filtros */
+.filtros {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto 14px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 18px;
+    border-right: 1px solid #ebe3f5;
+}
+
+.filtro:last-child {
+    border-right: none;
+}
+
+.filtro label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #8b05bf;
+}
+
+.filtro input,
+.filtro select {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    color: #400363;
+    outline: none;
+}
+
+.filtro select {
+    cursor: pointer;
+}
+
+.filtro:focus-within {
+    background-color: #f5f0fa;
+}
+
+.vagas-contagem {
+    max-width: 1200px;
+    margin: 0 auto 18px;
+    font-size: 13px;
+    color: #ebe3f5;
+}
+
+/* Grade de cards */
+.vagas-grade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vagas-vazio {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 30px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+
+.vaga-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 16px 20px;
+    background-color: #fff;
+    border-radius: 26px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    color: #400363;
+}
+
+.vaga-titulo {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.vaga-foto {
+    position: relative;
+    height: 180px;
+    border-radius: 14px;
+    background-color: #9000b5;
+    background-image: var(--foto), linear-gradient(135deg, #9000b5 0%, #400363 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.vaga-estado {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 2px 9px;
+    border-radius: 6px;
+    background-color: #FFA301;
+    color: #400363;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.vaga-tags {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    display: flex;
+    gap: 6px;
+}
+
+.vaga-tag {
+    padding: 2px 9px;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #400363;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.vaga-tag.area {
+    background-color: #FFA301;
+}
+
+.vaga-info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+    color: #7a0a9c;
+}
+
+.vaga-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.vaga-info i {
+    flex: 0 0 18px;
+    margin-top: 2px;
+    text-align: center;
+    font-size: 16px;
+    color: #9000b5;
+}
+
+.vaga-info .destaque {
+    font-weight: 700;
+}
+
+.vaga-info .salario {
+    font-weight: 700;
+    color: #400363;
+}
+
+.vaga-botao {
+    margin-top: auto;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #8a00a8;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.vaga-botao:hover {
+    background-color: #6b0085;
+}
+
+.vaga-botao:focus-visible,
+.filtros select:focus-visible,
+.filtros input:focus-visible {
+    outline: 3px solid #FFA301;
+    outline-offset: 2px;
+}
+
+/* Responsivo */
+@media (max-width: 1000px) {
+    .vagas-grade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filtros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .filtro-busca {
+        grid-column: 1 / -1;
+        border-right: none;
+        border-bottom: 1px solid #ebe3f5;
+    }
+}
+
+@media (max-width: 650px) {
+    .vagas-lista {
+        padding: 10px 16px 50px;
+    }
+
+    .vagas-grade {
+        grid-template-columns: 1fr;
+    }
+}

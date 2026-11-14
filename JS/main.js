@@ -80,7 +80,44 @@ const vagas = [
         idade: "17 a 22 anos",
         horario: "Segunda a sexta, das 08h00 às 15h15",
         salario: "R$1.621,00"
+    },
+    {
+        titulo: "Jovem Aprendiz - Financeiro",
+        estado: "SP",
+        area: "Financeiro",
+        modalidade: "Presencial",
+        foto: "./img/vagas/sao-paulo.jpg",
+        local: "São Paulo - Centro Histórico",
+        requisito: "Necessário ter sido ex-aluno Percorre",
+        idade: "16 a 22 anos",
+        horario: "Segunda a sexta das 10h às 17h | 1 ou 2 dias de capacitação teórica",
+        salario: "R$1.142,33"
+    },
+    {
+        titulo: "Jovem Aprendiz - Recursos Humanos",
+        estado: "RS",
+        area: "Administrativo",
+        modalidade: "Híbrido",
+        foto: "./img/vagas/porto-alegre.jpg",
+        local: "Porto Alegre - Cidade Baixa",
+        requisito: "Necessário ter sido ex-aluno Percorre",
+        idade: "16 a 22 anos",
+        horario: "Segunda a sexta, 4 horas por dia a combinar com a empresa",
+        salario: "R$810,50"
+    },
+    {
+        titulo: "Jovem Aprendiz - Vendas",
+        estado: "SC",
+        area: "Atendimento",
+        modalidade: "Presencial",
+        foto: "./img/vagas/joinville.jpg",
+        local: "Santo Antônio - Joinville",
+        requisito: "Necessário ter sido ex-aluno Percorre",
+        idade: "17 a 22 anos",
+        horario: "Segunda a sexta, das 08h00 às 15h15",
+        salario: "R$1.621,00"
     }
+    
 ];
 
 const vagasTrack = document.getElementById("vagasTrack");

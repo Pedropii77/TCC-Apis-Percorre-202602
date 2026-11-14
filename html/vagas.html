@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vagas | Lupita</title>
     <link rel="stylesheet" href="../CSS/alt.css">
-    <link rel="stylesheet" href="/CSS/vagas.css">
+    <link rel="stylesheet" href="../CSS/vagas.css">
     <link rel="icon" href="../img/logo-lupita.png" type="image/x-icon">
     <!-- Linkagem com o site para os icons do footer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -34,7 +34,63 @@
     </div>
 
     <main class="main">
-        
+         <section class="inicio">
+            <div class="inicio-left">
+                <div class="inicio-texto">
+                    <div class="titulo-box">
+                        <h1 class="titulo">Seu próximo passo começa aqui.</h1>
+                    </div>
+                    <p class="subtitulo">Com a Lupita, você encontra oportunidades que combinam com o que você aprendeu e se conecta com empresas que valorizam quem coloca a mão na massa. Aqui, cada vaga é um novo caminho para crescer na carreira, ganhar experiência de verdade e transformar a sua formação em resultados dentro do mercado de trabalho.</p>
+                </div>
+            </div>
+
+            <div class="inicio-right">
+                <img class="logo-percorre" src="../img/lupita.png" alt="Lupita, mascote do Instituto Percorre">
+            </div>
+        </section>
+
+        <div class="divisor-onda">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,60 C240,110 480,10 760,40 C1040,70 1240,110 1440,50 L1440,120 L0,120 Z"></path>
+            </svg>
+        </div>
+
+        <!-- Listagem de vagas -->
+        <section class="vagas-lista" aria-labelledby="vagas-lista-titulo">
+            <h2 id="vagas-lista-titulo" class="sr-only">Lista de vagas</h2>
+
+            <form class="filtros" id="filtros" role="search" aria-label="Filtrar vagas" onsubmit="return false">
+                <div class="filtro filtro-busca">
+                    <label for="filtroBusca">Buscar</label>
+                    <input type="search" id="filtroBusca" placeholder="Cargo, cidade ou área">
+                </div>
+                <div class="filtro">
+                    <label for="filtroEstado">Estado</label>
+                    <select id="filtroEstado"><option value="">Todos</option></select>
+                </div>
+                <div class="filtro">
+                    <label for="filtroArea">Área</label>
+                    <select id="filtroArea"><option value="">Todas</option></select>
+                </div>
+                <div class="filtro">
+                    <label for="filtroModalidade">Modalidade</label>
+                    <select id="filtroModalidade"><option value="">Todas</option></select>
+                </div>
+                <div class="filtro">
+                    <label for="filtroOrdem">Ordenar por</label>
+                    <select id="filtroOrdem">
+                        <option value="">Padrão</option>
+                        <option value="menor">Menor salário</option>
+                        <option value="maior">Maior salário</option>
+                    </select>
+                </div>
+            </form>
+
+            <p class="vagas-contagem" id="vagasContagem" aria-live="polite"></p>
+
+            <div class="vagas-grade" id="vagasGrade"></div>
+            <p class="vagas-vazio" id="vagasVazio" hidden>Nenhuma vaga encontrada com esses filtros. Tente limpar a busca.</p>
+        </section>
     </main>
 
     <footer class="footer">
@@ -73,5 +129,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility/dist/sienna-accessibility.umd.js" defer></script>
 
     <script src="../JS/main.js"></script>
+    <script src="../JS/vagas.js"></script>
 </body>
 </html>
